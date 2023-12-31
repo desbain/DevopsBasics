@@ -44,7 +44,7 @@
 
 <body>
     <div>
-        <h1>A demo that the CI/CD pipeline is working</h1>
+        <h1>Can you see this? If you can, then our CI/CD is now automated and working fine</h1>
         <p>For additional info, click <a href="#">click here</a> theitern.com!</p>
     </div>
 </body>
