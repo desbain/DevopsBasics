@@ -44,7 +44,7 @@
 
 <body>
     <div>
-        <h1>Hello Class! </h1>
+        <h1>We are now testing to see if our CD/CD works </h1>
         <p>For additional info, click <a href="#">click here</a> theitern.com!</p>
     </div>
 </body>
