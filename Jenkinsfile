@@ -33,7 +33,22 @@ pipeline {
             }
         }
 
-	stage('Package') {
+        stage('OWASP Dependency-Check') {
+            steps {
+                script {
+                    def dependencyCheckScan = dependencyCheck publisher: [
+                        autoUpdate: true,
+                        enableGlobalThreshold: true,
+                        failBuildOnCVSS: 8.0,
+                        useAuthFile: true,
+                        skipOnScmChange: true,
+                        skipOnUpstreamChange: true,
+                    ]
+                }
+            }
+        }
+
+        stage('Package') {
             steps {
                 sh 'mvn package'
             }
