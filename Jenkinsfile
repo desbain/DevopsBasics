@@ -5,6 +5,7 @@ pipeline {
     }
     agent any
 
+<<<<<<< HEAD
     stages {
         stage('Checkout') {
             steps {
@@ -40,3 +41,7 @@ pipeline {
         }
     }
 }
+=======
+
+
+>>>>>>> 1afbb69198eefbe4b3ff8d797b2da435ff165534
