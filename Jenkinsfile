@@ -14,7 +14,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'theitern', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     script {
                         // Clone the private GitHub repository using the provided credentials
-                        git credentialsId: 'theitern', url: "https://github.com/theitern/DevopsBasics.git"
+                        git credentialsId: 'theitern', url: "https://github.com/desbain/devops-basics.git"
                     }
                 }
             }
