@@ -28,7 +28,7 @@
                     }
                 }
                 stage('UnitTest'){
-                    agent {label 'Slave1_'}
+                    agent {label 'Slave_1'}
                     steps{
                     echo 'Testing'
                         sh 'mvn test'
