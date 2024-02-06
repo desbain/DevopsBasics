@@ -9,7 +9,7 @@
                     agent any
                     steps{
                 echo 'cloning...'
-                        git 'https://github.com/desbain/DevopsBasics.git'
+                        git 'https://github.com/desbain/devops-basics.git'
                     }
                 }
                 stage('Compile'){
@@ -28,7 +28,7 @@
                     }
                 }
                 stage('UnitTest'){
-                    agent {label 'Slave_1'}
+                    agent {label 'Slave1_'}
                     steps{
                     echo 'Testing'
                         sh 'mvn test'
