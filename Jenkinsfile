@@ -1,47 +1,39 @@
-pipeline {
-    tools {
-        jdk 'myjava'
-        maven 'mymaven'
-    }
-    agent any
-
-<<<<<<< HEAD
-    stages {
-        stage('Checkout') {
-            steps {
-                echo 'cloning..'
-                // Use withCredentials to provide GitHub credentials
-                withCredentials([usernamePassword(credentialsId: 'theitern', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    script {
-                        // Clone the private GitHub repository using the provided credentials
-                        git credentialsId: 'theitern', url: "https://github.com/desbain/devops-basics.git"
-                    }
-                }
-            }
-        }
-
-        stage('Compile') {
-            steps {
-                echo 'compiling..'
-                sh 'mvn compile'
-            }
-        }
-
-        stage('CodeReview') {
-            steps {
-                echo 'codeReview'
-                sh 'mvn pmd:pmd'
-            }
-        }
-
-	stage('Package') {
-            steps {
-                sh 'mvn package'
-            }
-        }
-    }
+pipeline{
+tools{
+jdk 'myjava'
+maven 'mymaven'
 }
-=======
-
-
->>>>>>> 1afbb69198eefbe4b3ff8d797b2da435ff165534
+agent any
+stages{
+stage('Clone Repo')
+{
+steps{
+git 'https://github.com/desbain/DevopsBasics.git'
+}
+}
+stage('Compile the code')
+{
+steps{
+sh 'mvn compile'
+}
+}
+stage('Code Analysis')
+{
+steps{
+sh 'mvn pmd:pmd'
+}
+}
+stage('code coverage')
+{
+steps{
+sh 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
+}
+}
+stage('Build the artifact')
+{
+steps{
+sh 'mvn package'
+}
+}
+}
+}
