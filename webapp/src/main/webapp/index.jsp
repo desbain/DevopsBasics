@@ -44,13 +44,8 @@
 
 <body>
     <div>
-<<<<<<< HEAD
-        <h1>We are now testing to see if our CD/CD works. </h1>
+        <h1>Hello All, We are now testing to see if our CI/CD works. </h1>
         <p>Click <a href="#">click here</a> theitern.com!</p>
-=======
-        <h1>A demo that the CI/CD pipeline is working</h1>
-        <p>For additional info, click <a href="#">click here</a> theitern.com!</p>
->>>>>>> 45eb9ba61459da7861f5ae4534e27a9b22138853
     </div>
 </body>
 
