@@ -44,7 +44,7 @@
 
 <body>
     <div>
-        <h1>If you see this, it means our see CI/CD works. Thank you </h1>
+        <h1>If you see this, it means our CI/CD works. Thank you </h1>
         <p>Click <a href="#">click here</a> theitern.com!</p>
     </div>
 </body>
